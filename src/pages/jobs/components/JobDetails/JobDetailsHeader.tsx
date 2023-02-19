@@ -34,7 +34,7 @@ const JobDetailsHeader: React.FC<JobsContextDataInterface> = ({
             </span>
           </div>
 
-          <div>
+          <div className="leading-6">
             <span className="">Job Posted by </span>
             <span className=" underline underline-offset-4">
               {selectedJob?.company?.name}
