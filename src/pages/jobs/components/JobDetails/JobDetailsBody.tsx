@@ -64,8 +64,8 @@ const JobDetailsBody: React.FC<JobsContextDataInterface> = ({
           <div className="mt-[3rem]">
             <span className="font-bold text-[1.5rem]">Responsibilities</span>
             <ul className="list-disc list-inside font-medium text-[1rem]">
-              {selectedJob?.role?.responsibilities.map((responsibility) => (
-                <li className="ml-4">{responsibility}</li>
+              {selectedJob?.role?.responsibilities.map((responsibility, i) => (
+                <li key={i} className="ml-4">{responsibility}</li>
               ))}
             </ul>
           </div>
