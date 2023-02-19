@@ -8,4 +8,4 @@ npm run dev
 ```
 
 
-Visit [http://localhost:3000](http://localhost:3000) to view the site.
+Visit [http://localhost:3000/jobs](http://localhost:3000/jobs) to view the site.
