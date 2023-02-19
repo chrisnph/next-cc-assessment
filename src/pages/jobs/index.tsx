@@ -16,7 +16,7 @@ const Jobs: React.FC = () => {
         </div>
         <div className="bg-gradient-to-br from-[#EDE5D8] to-[#f5f0e8] ">
           <div className="flex-1 flex flex-wrap lg:mx-[3rem]">
-            <div className="jobs-left w-full md:w-2/5 lg:w-1/5 bg-transparent px-4 md:px-8 py-8 flex flex-col items-center md:min-w-[350px]">
+            <div className="jobs-left w-full h-[100vh] md:w-2/5 lg:w-1/5 bg-transparent px-4 md:px-8 py-8 flex flex-col items-center md:min-w-[350px]">
               {jobs.map((job) => (
                 <JobCard key={job.id} jobInfo={job} />
               ))}
