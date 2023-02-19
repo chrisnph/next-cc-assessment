@@ -10,8 +10,6 @@ const JobCard: React.FC<JobsCardProps> = ({ jobInfo }) => {
   const { jobs, setSelectedJob, selectedJob } = useJobsContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const modalRef = useRef<null | HTMLDivElement>(null);
-
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
@@ -33,24 +31,17 @@ const JobCard: React.FC<JobsCardProps> = ({ jobInfo }) => {
   return (
     <>
       {isModalOpen && (
-        <div ref={modalRef}>
-          <Modal width="full" height="full" onClose={handleModalClose}>
-            <JobDetails />
-          </Modal>
-        </div>
+        <Modal width="full" height="full" onClose={handleModalClose}>
+          <JobDetails />
+        </Modal>
       )}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="jobCard-container flex items-center justify-center w-full bg-[#F5F5F5] rounded-3xl md:px-4 py-3 mb-5 md:min-w-[340px] sm:max-w-[400px] min-h-[180px] max-h-[180px] cursor-pointer "
         onClick={() => {
-          setIsModalOpen(true);
-          modalRef.current &&
-            modalRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-              inline: "start",
-            });
+          handleJobClicks();
+          window.innerWidth < 850 && setIsModalOpen(true);
         }}
       >
         <div className="jobCard-image w-1/4 flex justify-center items-center">
