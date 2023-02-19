@@ -42,7 +42,7 @@ const JobDetailsHeader: React.FC<JobsContextDataInterface> = ({
           </div>
         </div>
 
-        <div className="flex justify-between flex-col lg:flex-row">
+        <div className="flex justify-between flex-col lg:flex-row mt-10 md:mt-0">
           <div className="jobDetails-time-applicants flex flex-col w-2/4">
             <span className="leading-none mb-1 text-[1.1rem]">
               {dayHoursDifference(selectedJob?.publishDate).diffHours} Hours ago
