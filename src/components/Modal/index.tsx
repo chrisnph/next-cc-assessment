@@ -19,7 +19,7 @@ const Modal: React.FC<ModalPropsInterface> = ({
       />
 
       <div
-        className={`bg-white rounded-lg overflow-x-hidden overflow-y-auto shadow-lg ${
+        className={`bg-white rounded-3xl overflow-x-hidden overflow-y-auto shadow-lg ${
           width ? `w-${width}` : ""
         } ${height ? `h-${height}` : ""}`}
       >
